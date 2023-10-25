@@ -1,0 +1,146 @@
+/* FONT STYLE */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --clr-accent1: hsl(225, 100%, 94%);
+  --clr-accent2: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --clr-neutral1: hsl(225, 100%, 98%);
+  --clr-neutral2: hsl(224, 23%, 55%);
+  --clr-neutral3: hsl(223, 47%, 23%);
+
+  /* Fonts */
+  --ff-all: "Red Hat Display", sans-serif;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --fs-all: 16px;
+}
+
+body {
+  background: #d6e1ff;
+}
+
+main {
+  font-family: var(--ff-all);
+  font-size: var(--fs-all);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  border-radius: 20px;
+  background: #fff;
+  max-width: 450px;
+}
+
+.container svg {
+  width: auto;
+}
+
+.container h1 {
+  font-weight: var(--fw-900);
+  color: var(--clr-neutral3);
+  font-size: 1.75rem;
+  padding: 1rem;
+}
+
+.container p {
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 3rem 0 3rem;
+  color: var(--clr-neutral2);
+}
+
+/* PAYMENT SECTION */
+.payment {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  place-items: center;
+  background: var(--clr-neutral1);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.payment a {
+  padding-left: 4rem;
+  color: var(--clr-accent2);
+  font-weight: var(--fw-700);
+  font-size: 14px;
+}
+
+.payment a:hover {
+  text-decoration: none;
+  color: hsl(245, 83%, 68%);
+}
+
+/* PAYMENT DETAILS SECTION */
+.payment-details {
+  display: grid;
+  place-items: start;
+}
+
+.payment-details h2 {
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral3);
+  font-size: 19px;
+}
+
+.payment-details p {
+  margin: 0;
+}
+
+main button {
+  font-family: var(--ff-all);
+  font-weight: var(--fw-900);
+  margin-bottom: 1.5rem;
+}
+
+.proceed {
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background: var(--clr-accent2);
+  color: #fff;
+  padding: 14px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.proceed:hover {
+  background: hsl(245, 83%, 68%);
+}
+
+.cancel {
+  border-style: none;
+  background: transparent;
+  color: var(--clr-neutral2);
+  cursor: pointer;
+}
+
+.cancel:hover {
+  color: var(--clr-neutral3);
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin: 1rem;
+  }
+}
